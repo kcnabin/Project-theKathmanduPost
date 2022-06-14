@@ -17,6 +17,7 @@ ul > li {
 
 a {
 	text-decoration: none;
+	color: #4f4f4f;
 }
 .titleBan a {
 	color: #e2e3e1;
@@ -27,8 +28,8 @@ a {
 }
 
 .mainPage {
-	padding-left: 50px;
-	padding-right: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .mainPage p {
@@ -38,13 +39,15 @@ a {
 
 .grid-container {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-	text-align: center;
+	grid-template-columns: auto auto auto auto auto auto;
+	text-align: left;
 	border-top: 1px solid black;
-	border-bottom: 1px solid black;;
+	border-bottom: 1px solid black;
+	
 	padding: 5px;
-	margin: 2px;
+	margin: 10px;
 }
+
 
 .grid-container .grid-child-one {
 	text-transform: uppercase;
@@ -69,6 +72,8 @@ a {
 	font-size: 12px;
 	vertical-align: text-bottom;
 	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .date_motto_weather .motto {
@@ -84,3 +89,49 @@ a {
 .weather img {
 	vertical-align: text-top;
 }
+
+.news_top {
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas: 
+		"break_news1 politics1 eco1"
+		"break_news2 politics1 eco2"
+		"break_news3 politics2 eco3";
+	/*border:  1px solid black;*/
+}
+
+.politics1 {
+	grid-area: politics1;
+}
+
+.news_top div {
+	/*border:  1px solid black;*/
+	padding: 15px;
+	margin: 10px;
+	border-bottom: 1px solid #d3dceb;
+	
+}
+
+.news_top div .politics1{
+	padding: 25px;
+}
+
+
+.news_top div .title {
+	text-align: left;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.news_top div .author {
+	font-size: 11px;
+	text-align: left;
+}
+
+.news_top div .news {
+	text-align: left;
+	font-size: 16px;
+}
+
